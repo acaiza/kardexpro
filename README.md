@@ -1,0 +1,2 @@
+# kardexpro
+Apply inventory control
