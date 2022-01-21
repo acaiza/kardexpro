@@ -1,0 +1,31 @@
+if(!project.hasProperty('querydslVersion')){
+    ext.querydslVersion = '4.3.1'
+}
+
+sourceSets {
+    generated {
+        java {
+            srcDir "$buildDir/generated/sources/annotationProcessor/java/main"
+            srcDir "$buildDir/generated/sources/annotationProcessor/java/test"
+        }
+    }
+}
+
+dependencies {
+    compile("com.querydsl:querydsl-core:${querydslVersion}")
+    compile("com.querydsl:querydsl-jpa:${querydslVersion}")
+}
+
+dependencies {
+    compile "com.querydsl:querydsl-jpa:${querydslVersion}"
+    compileOnly 'org.projectlombok:lombok'
+    compileOnly 'javax.persistence:javax.persistence-api'
+    compileOnly 'javax.annotation:javax.annotation-api'
+    annotationProcessor(
+            "com.querydsl:querydsl-apt:${querydslVersion}:general",
+            "com.querydsl:querydsl-apt:${querydslVersion}:jpa",
+            "javax.persistence:javax.persistence-api",
+            "javax.annotation:javax.annotation-api",
+            "org.projectlombok:lombok"
+    )
+}
