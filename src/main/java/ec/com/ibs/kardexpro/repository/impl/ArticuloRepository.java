@@ -17,6 +17,9 @@ import java.time.Instant;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * Clase para implementar la persistencia del articulo.
+ */
 @Repository
 public class ArticuloRepository extends BaseModel implements IArticuloRepository {
 
@@ -29,9 +32,9 @@ public class ArticuloRepository extends BaseModel implements IArticuloRepository
     }
 
     @Override
-    public List<ArticuloCategoriaResponse> obtenerArticulos(Boolean obtieneStock) {
-        QArticuloEntity qArticuloEntity = QArticuloEntity.articuloEntity;
-        QCategoriaEntity qCategoriaEntity = QCategoriaEntity.categoriaEntity;
+    public List<ArticuloCategoriaResponse> obtenerArticulos(final Boolean obtieneStock) {
+        final QArticuloEntity qArticuloEntity = QArticuloEntity.articuloEntity;
+        final QCategoriaEntity qCategoriaEntity = QCategoriaEntity.categoriaEntity;
         JPAQuery<ArticuloCategoriaResponse> query = new JPAQuery<>(ema);
 
         BooleanBuilder predicate = new BooleanBuilder();

@@ -20,7 +20,7 @@ public class CategoriaController {
     private static final String RESTYP = "restyp";
     private static final String MES = "mes";
     @Autowired
-    ICategoriaService categoriaService;
+    private ICategoriaService categoriaService;
 
     @PostMapping(value = "/registrarCategoria")
     public ResponseEntity<Void> registrarCategoria(@RequestBody CategoriaEntity categoriaEntity) {

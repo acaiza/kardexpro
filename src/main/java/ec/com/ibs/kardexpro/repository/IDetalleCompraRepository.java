@@ -14,4 +14,11 @@ public interface IDetalleCompraRepository {
      * @param detallesCompra
      */
     void registrarDetalleCompra(List<DetalleCompraEntity> detallesCompra);
+
+    /**
+     * Obtiene el listado de compras del usuario.
+     * @param userName
+     * @return
+     */
+    List<DetalleCompraEntity> obtenerDetallesComprasPorUsuario(String userName);
 }

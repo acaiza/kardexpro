@@ -11,4 +11,5 @@ public interface ICompraRepository {
      * @param compraEntity
      */
     void registraCompra(CompraEntity compraEntity);
+
 }

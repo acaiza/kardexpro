@@ -20,4 +20,11 @@ public interface ICompraService {
      */
     void realizarCompra(CompraVO compraVO);
 
+    /**
+     * Obtiene la lista de pedidos del usuario.
+     * @param userName
+     * @return
+     */
+    List<CompraEntity> obtenerComprasPorUsuario(String userName);
+
 }
