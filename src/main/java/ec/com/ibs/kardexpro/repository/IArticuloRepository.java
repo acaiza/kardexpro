@@ -16,7 +16,15 @@ public interface IArticuloRepository {
 
     /**
      * Metodo para obtener los articulos registrados.
+     * @param obtieneStock
+     *          Bandera para verificar si obtiene el stock del articulo
      * @return
      */
-    List<ArticuloCategoriaResponse> obtenerArticulos();
+    List<ArticuloCategoriaResponse> obtenerArticulos(Boolean obtieneStock);
+
+    /**
+     * Metodo para actualizar la existencia
+     * @param articulo
+     */
+    void actualizaExistencia(ArticuloEntity articulo);
 }

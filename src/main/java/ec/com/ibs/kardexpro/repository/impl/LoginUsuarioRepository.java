@@ -4,6 +4,10 @@ import com.querydsl.core.types.Projections;
 import com.querydsl.jpa.impl.JPAQuery;
 import ec.com.ibs.kardexpro.model.*;
 import ec.com.ibs.kardexpro.repository.ILoginUsuarioRepository;
+import ec.com.ibs.kardexpro.model.BaseModel;
+import ec.com.ibs.kardexpro.model.RolEntity;
+import ec.com.ibs.kardexpro.model.UsuarioEntity;
+import ec.com.ibs.kardexpro.model.UsuarioRolEntity;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

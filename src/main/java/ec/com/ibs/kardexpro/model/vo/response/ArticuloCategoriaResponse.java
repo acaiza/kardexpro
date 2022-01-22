@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class ArticuloCategoriaResponse {
 
-    private Long idArticulo;
+    private Integer idArticulo;
     private String codigoBarras;
     private String descripcion;
     private Double precio;

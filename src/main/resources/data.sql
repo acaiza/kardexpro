@@ -32,6 +32,24 @@ VALUES (2,'7333333', 'Vaso Batman', 7, 7, '1', current_timestamp, 0);
 
 INSERT INTO SCKARTICULO
 (IDCATEGORIA, CODIGOBARRAS, DESCRIPCION, PRECIO, EXISTENCIA, ESTADO, FECHAREGISTRO, VERSION)
-VALUES (1,'7333333', 'Vaso Iron man', 7, 7, '1', current_timestamp, 0);
+VALUES (1,'744444', 'Vaso Iron man', 7, 7, '1', current_timestamp, 0);
+
+INSERT INTO SCKTIPOPAGO
+(DESCRIPCIONTIPOPAGO,ESTADO, FECHAREGISTRO, VERSION)
+VALUES ('Tarjeta de credito', '1', current_timestamp, 0);
+
+INSERT INTO SCKTIPOPAGO
+(DESCRIPCIONTIPOPAGO,ESTADO, FECHAREGISTRO, VERSION)
+VALUES ('Tarjeta de debito', '1', current_timestamp, 0);
+
+INSERT INTO SCKTIPOPAGO
+(DESCRIPCIONTIPOPAGO,ESTADO, FECHAREGISTRO, VERSION)
+VALUES ('Trasnferencia bancaria', '1', current_timestamp, 0);
+
+INSERT INTO SCKPERSONA
+(IDUSUARIO, NOMBRES, APELLIDOS, MAIL, DIRECCION, ESTADO, FECHAREGISTRO)
+values (1, 'Andres', 'Carapaz', 'ancar@gmail.com', 'La Planada', true, current_timestamp);
+
+
 
 

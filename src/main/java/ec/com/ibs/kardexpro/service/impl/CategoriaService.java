@@ -14,7 +14,7 @@ import java.util.List;
 public class CategoriaService implements ICategoriaService {
 
     @Autowired
-    ICategoriaRepository categoriaRepository;
+    private ICategoriaRepository categoriaRepository;
 
     @Override
     public void registrarCategoria(CategoriaEntity categoriaEntity) {

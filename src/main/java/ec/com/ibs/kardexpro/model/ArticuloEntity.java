@@ -29,7 +29,7 @@ public class ArticuloEntity extends AuditoriaBaseEntity{
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idArticulo;
+    private Integer idArticulo;
 
     @Column(name = "CODIGOBARRAS", nullable = false)
     private String codigoBarras;

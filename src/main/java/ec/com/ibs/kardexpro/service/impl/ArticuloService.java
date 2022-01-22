@@ -19,21 +19,20 @@ import java.util.List;
 
 
 @Transactional
-@Service
 @Slf4j
-
+@Service
 public class ArticuloService implements IArticuloService {
 
     @Autowired
-    IArticuloRepository articuloRepository;
+    private IArticuloRepository articuloRepository;
 
     private static Logger logger = LoggerFactory.getLogger(ArticuloService.class);
     @Override
     public ArticuloEntity registrarArticulo(ArticuloEntity articuloEntity) {
         try {
-            //Valida los campos requeridos del articulo
+            //1.0 Valida los campos requeridos del articulo
             AdministracionKardexUtil.validarArticuloEntity(articuloEntity);
-            //Registra el articulo
+            //2.0 Registra el articulo
             return articuloRepository.registrarArticulo(articuloEntity);
         } catch (KardexproException e) {
             logger.error("Error: Al registrar el articulo",e);
@@ -47,7 +46,7 @@ public class ArticuloService implements IArticuloService {
     @Override
     public List<ArticuloCategoriaResponse> obtenerArticulos() {
         try {
-            return articuloRepository.obtenerArticulos();
+            return articuloRepository.obtenerArticulos(Boolean.FALSE);
         } catch (QueryException e) {
             logger.error("Erro al obtener los articulos registrados",e);
             throw new KardexproException("Erro al obtener los art\u00EDculos registrados", e);
